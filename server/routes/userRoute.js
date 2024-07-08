@@ -17,7 +17,7 @@ const {
 const { login_validator} = require("../middlewares/loginValidator");
 const registerValidator = require("../middlewares/registerValidator");
 const loginValidator = require("../middlewares/loginValidator");
-
+const UserModel = require("../model/UserModel");
 
 const { adminAuthentication} = require("../middlewares/authentication");
 const { teacherAuthentication } = require("../middlewares/authentication");
@@ -56,7 +56,7 @@ registerValidator, registerValidator.register_validator ,register__controller
 );
 
 router.put('/updateRole', 
-adminAuthentication,
+
 updateUserRole
 );
 
@@ -80,6 +80,8 @@ router.get('/user/history', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+
 
 
 

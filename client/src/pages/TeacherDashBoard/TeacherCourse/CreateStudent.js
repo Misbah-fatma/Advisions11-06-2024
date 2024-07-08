@@ -1,20 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Sidebar from '../SideBar';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 const CreateUser = () => {
+  const [userData, setUserData] = useState(null);
+  useEffect(() => {
+    const userDataFromStorage = localStorage.getItem('user');
+    if (userDataFromStorage) {
+      try {
+        const parsedData = JSON.parse(userDataFromStorage);
+        setUserData(parsedData);
+      } catch (error) {
+        console.error('Failed to parse user data:', error);
+      }
+    }
+  }, []);
+
+  const userId = userData ? userData._id : null;
+
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
- 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [toast, setToast] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false); // State for opening Snackbar
   const navigate = useNavigate();
 
   const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_URL });
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenSnackbar(false);
+  };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -24,6 +47,7 @@ const CreateUser = () => {
       email,
       password,
       confirmPassword,
+      teacherId: userId 
     })
     .then((response) => {
       setLoading(false);
@@ -31,17 +55,22 @@ const CreateUser = () => {
       console.log(result);
       if (result.errors) {
         setError(result.errors);
+        setOpenSnackbar(false); // Close Snackbar if there was an error
       } else {
-        setToast(true);
+        setOpenSnackbar(true); // Open Snackbar if user is created successfully
         setError(null);
-       
+        // Optionally, you can reset the form fields here
+        setUserName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
       }
     })
     .catch((error) => {
       console.log(error);
+      setLoading(false);
     });
   };
-  
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header" id="appContent">
@@ -124,8 +153,6 @@ const CreateUser = () => {
                           </div>
                         </div>
 
-                        
-
                         <div className="col-12">
                           <button type="submit" className="btn bgBlue btn-dipBlue text-black">
                             {loading ? 'Creating...' : 'Create'}
@@ -134,7 +161,16 @@ const CreateUser = () => {
                       </div>
                     </form>
                     {error && <div className="alert alert-danger mt-3">{error}</div>}
-                    {toast && <div className="alert alert-success mt-3">User created successfully!</div>}
+                    <Snackbar
+                      open={openSnackbar}
+                      autoHideDuration={3000}
+                      onClose={handleSnackbarClose}
+                      anchorOrigin={{ vertical: 'center', horizontal: 'center' }} // Centering Snackbar
+                    >
+                      <MuiAlert elevation={6} variant="filled" onClose={handleSnackbarClose} severity="success">
+                        User created successfully!
+                      </MuiAlert>
+                    </Snackbar>
                   </div>
                 </div>
               </div>

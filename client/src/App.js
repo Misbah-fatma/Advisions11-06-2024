@@ -69,6 +69,11 @@ import InstructorTerms from "./pages/Privacy/InstructorTerms.js"
 import MasterServices from './pages/Privacy/MasterServicesAgreement.js';
 import PricingPromotional from "./pages/Privacy/Pricing&PromotionPolicy.js"
 import TermsofUse from "./pages/Privacy/TermsofUse.js"
+import CodeEditorProgramProgress from "./pages/StudentDashBoard/StudentsEnrolled/CodeEditorProgramProgress.js"
+import BlocklyProgress from "./pages/StudentDashBoard/StudentsEnrolled/BlocklyProgress.js"
+import Rough from "./pages/rough.js"
+import Info from "./pages/TeacherDashBoard/TeacherCourse/courseDetails.js"
+import AdminLectures from "./pages/AdminDashBoard/Course Management/CreateLectures.js"
 
 
 const Routing = () => {
@@ -89,11 +94,31 @@ const Routing = () => {
       
       </Route>
 
+      <Route exact path="/course/:courseId"  element={<Info />}>
+      
+      </Route>
+
+      <Route exact path="/createAdminLectures"  element={<AdminLectures />}>
+      
+      </Route>
+
+      <Route exact path="/codeEditorProgress"  element={<CodeEditorProgramProgress />}>
+      
+      </Route>
+
+      <Route exact path="/blocklyProgress"  element={<BlocklyProgress />}>
+      
+      </Route>
+
       <Route exact path="/checkout" element={<CheckOut />}>
     
       </Route>
 
       <Route exact path="/metaData" element={<Metadata />}>
+    
+    </Route>
+
+    <Route exact path="/rough" element={<Rough />}>
     
     </Route>
 
@@ -142,7 +167,7 @@ const Routing = () => {
         
         </Route>
 
-        <Route exact path="/createLecture"  element={<TeacherRoute><CreateLecture /></TeacherRoute>}>
+        <Route exact path="/createLecture"  element={<CreateLecture />}>
         
         </Route>
 

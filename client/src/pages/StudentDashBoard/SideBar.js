@@ -122,7 +122,7 @@ const Sidebar = () => {
       <div className="option" onClick={() => toggleOptions('option1')}>
         <NavLink to="/studentDashboard" activeClassName="active-link vertical-nav-menu">
           <i className="fa-solid fa-home menu-icon"></i>
-          Dashboard
+          Dashboard<span className='text-white'>dfgvdrfv</span>
         </NavLink>
        
       </div>
@@ -155,7 +155,7 @@ const Sidebar = () => {
       <div className="option" onClick={() => toggleOptions('option6')}>
         <NavLink to="/student" activeClassName="active-link vertical-nav-menu">
         <i className="fa-solid fa-users menu-icon"></i>
-          Student<br/>
+          Student  <span className='text-white'>dfgvdrfv</span>
         </NavLink>
         
       </div>
@@ -165,8 +165,16 @@ const Sidebar = () => {
         <i className="fa-solid fa-users menu-icon"></i>
         Add Details
         </NavLink>
+        </div>
+
         
-      </div>
+        {/* <div className="option" onClick={() => toggleOptions('option6')}>
+        <NavLink to="/codeEditorProgress" activeClassName="active-link vertical-nav-menu">
+        <i className="fa-solid fa-users menu-icon"></i>
+        Code Editor Progress
+        </NavLink>
+        
+      </div> */}
       <div className="option" onClick={() => toggleOptions('option7')}>
         <NavLink  activeClassName="active-link vertical-nav-menu">
         <i className="fa-solid fa-credit-card menu-icon"></i>
@@ -192,7 +200,7 @@ const Sidebar = () => {
       <div className="option" onClick={() => toggleOptions('option8')}>
         <NavLink  activeClassName="active-link">
           <i className="fa-solid fa-gear menu-icon"></i>
-          Settings
+          Settings<span className='text-white'>dfgvdrfv</span>
         </NavLink>
         {showOptions.option8 &&
           <div className="sub-options">

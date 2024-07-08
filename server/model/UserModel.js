@@ -48,6 +48,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  teacherId: { type: String }, 
+
   codeHistory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Code' }]
 }, { timestamps: true });
 

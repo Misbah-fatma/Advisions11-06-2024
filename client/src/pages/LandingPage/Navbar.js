@@ -54,7 +54,7 @@ const handleLogout = () => {
           <nav className="navbar navbar-expand-lg  p-0">
             <Link to="/" className="navbar-brand">
             <Link to="/" className="navbar-brand d-flex align-items-center">
-        <img src={logo10} alt="Logo" style={{ height: "40px", marginRight: "5px" }} />
+        <img src={logo10} alt="Logo" style={{ height: "30px", marginRight: "5px" }} />
        
     </Link>
             </Link>
@@ -107,7 +107,7 @@ const handleLogout = () => {
 
                 
                 <Link to="/yjseditor" className="nav-item nav-link active">
-                    YJS Editor
+                   C-Board
                     </Link>
                     <Link to="/blockly2" className="nav-item nav-link active">
                    Blockly

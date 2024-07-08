@@ -36,7 +36,7 @@ const Home = () => {
         <p className="lead mb-5 h4 text-white">Whether you seek skill enhancement, <span>new explorations, career advancement, or learn a different skill</span></p>
         <p>Unlock your potential with our tailored courses designed to meet your unique learning goals.</p>
         <div>
-          <a data-fancybox data-ratio="2" href="" className="btn btn-primary btn-md">Watch Video</a>
+          {/* <a data-fancybox data-ratio="2" href="" className="btn btn-primary btn-md">Watch Video</a> */}
         </div>
         
       </div>

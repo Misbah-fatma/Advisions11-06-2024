@@ -5,6 +5,7 @@ const {SECRET_KEY}=require('../config/keys')
 
 module.exports={
     requireLogin(req,res,next){
+        
         let {authorization}=req.headers
         if(!authorization){
             return res.status(401).json({
@@ -30,3 +31,15 @@ module.exports={
     }
 }
 
+const createAuthToken = (user) => {
+    const payload = {
+      id: user._id,
+      email: user.email,
+      role: user.role
+    };
+  
+    const secret = process.env.JWT_SECRET; 
+    return jwt.sign(payload, secret);
+  };
+  
+  module.exports.createAuthToken = createAuthToken;

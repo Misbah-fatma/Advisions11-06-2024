@@ -46,12 +46,13 @@ const CourseInfo = ({course}) => {
                                     <thead>
                                         <tr>
                                           
-                                            <th><strong>ID</strong></th>
+                                  
                                             <th><strong>Course</strong></th>
                                             <th><strong>Description</strong></th>
                                             <th><strong>Price</strong></th>
                                            
                                             <th><strong>Course Link</strong></th>
+                                            <th><strong>Course Pdf</strong></th>
                                             <th><strong>Status</strong></th>
                                            
                                         </tr>
@@ -60,7 +61,7 @@ const CourseInfo = ({course}) => {
                                     <tbody>
                                  
                                  <tr key={row._id}>
-                                                <td className="tableId">{row._id}</td>
+                                             
                                               
                                                 <td className="tableProduct">
                                                 
@@ -72,6 +73,7 @@ const CourseInfo = ({course}) => {
                                                 <td className="tableId">  {row.coursePrice}</td>
                                               
                                                 <td className="tableId">{row.courseLink}</td>
+                                                <td className="tableId"><a href={row.coursePdf}>Pdf Url</a></td>
                                                 <td className="tableStatus">
                                                                                                             <div className="statusItem">
                                                             <div className="circleDot animatedCompleted"></div>

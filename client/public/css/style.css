@@ -125,7 +125,7 @@ h6,
 
 @media (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
-    display: block;
+    /* display: block; */
     border: none;
     margin-top: 0;
     top: 150%;
@@ -488,7 +488,7 @@ h6,
 }
 
 .footer .btn.btn-link {
-  display: block;
+  /* display: block; */
   margin-bottom: 10px;
   padding: 0;
   text-align: left;

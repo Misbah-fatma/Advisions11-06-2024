@@ -44,7 +44,7 @@ const Sidebar = ({ onFileClick }) => {
   };
 
   return (
-    <Box className="box-fix" w="18%">
+    <Box className="box-fix" w="18%" >
       <Text mb={2} fontSize="lg" textAlign="center" mt={4}>
         Your Previous Codes
       </Text>

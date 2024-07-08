@@ -199,13 +199,7 @@ const Sidebar = () => {
         </NavLink>
        
       </div>
-      <div className="option" onClick={() => toggleOptions('option6')}>
-        <NavLink to="/studentdash" activeClassName="active-link vertical-nav-menu">
-        <i className="fa-solid fa-users menu-icon"></i>
-          Student
-        </NavLink>
-        
-      </div>
+
       <div className="option" onClick={() => toggleOptions('option7')}>
         <NavLink  activeClassName="active-link vertical-nav-menu">
         <i className="fa-solid fa-credit-card menu-icon"></i>
@@ -231,7 +225,7 @@ const Sidebar = () => {
       <div className="option" onClick={() => toggleOptions('option8')}>
         <NavLink  activeClassName="active-link">
           <i className="fa-solid fa-gear menu-icon"></i>
-          Settings
+          Settings<span className='text-white'>sjdcidscjikefcjios</span>
         </NavLink>
         {showOptions.option8 &&
           <div className="sub-options">

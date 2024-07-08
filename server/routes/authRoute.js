@@ -9,11 +9,11 @@ const loginValidator = require("../middlewares/loginValidator");
 const UserModel = require("../model/UserModel");
 const router = require("express").Router();
 
-router.post("/login", loginValidator,login_validator,login__controller)
+router.post("/login",login__controller)
 
-router.post("/register",registerValidator, registerValidator.register_validator ,register__controller)
+router.post("/register",register__controller)
 
-router.post('/details',registerValidator,registerValidator.register_validator, details__controller);
+router.post('/details', details__controller);
 
 router.put('/details/:id', async (req, res) => {
   try {

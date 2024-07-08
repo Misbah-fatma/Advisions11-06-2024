@@ -1,17 +1,36 @@
 const multer = require("multer");
 const path = require("path");
-let storage = multer.diskStorage({});
-const fileFilter = (req, files, cb) => {
+
+// Multer configuration
+let storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Specify the directory where files should be stored
+  },
+  filename: function (req, file, cb) {
+    // Generate a unique name for the file
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+  }
+});
+
+// File filter function
+const fileFilter = (req, file, cb) => {
   if (
-  files.mimetype === "image/png" ||
-  files.mimetype === "image/jpg" ||
-  files.mimetype === "image/jpeg" ||
-  files.mimetype == "application/pdf"
+    file.mimetype === "image/png" ||
+    file.mimetype === "image/jpg" ||
+    file.mimetype === "image/jpeg" ||
+    file.mimetype === "application/pdf"
   ) {
-  cb(null, true);
+    cb(null, true);
   } else {
-  cb(new Error("File format should be PNG,JPG,JPEG,PDF"), false);
+    cb(new Error("File format should be PNG, JPG, JPEG, PDF"), false);
   }
 };
-const upload = multer({ storage: storage, fileFilter: fileFilter });
+
+// Multer upload instance
+const upload = multer({ 
+  storage: storage, 
+  fileFilter: fileFilter,
+});
+
 module.exports = upload;

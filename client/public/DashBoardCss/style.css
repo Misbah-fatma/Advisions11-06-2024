@@ -361,7 +361,7 @@ body {
     transition: all 0.2s;
 }
 
-.app-sidebar .app-sidebar-inner {
+/* .app-sidebar .app-sidebar-inner {
     padding: 2px 1.5rem 1.5rem;
 }
 
@@ -379,15 +379,15 @@ body {
 
 .closed-sidebar .app-sidebar:hover .profile-content {
     display: block;
-}
+/* } */
 
 .closed-sidebar .app-sidebar li.sub-menu::before {
     display: none;
 }
 
-.closed-sidebar .app-sidebar:hover li.sub-menu::before {
+/* .closed-sidebar .app-sidebar:hover li.sub-menu::before {
     display: block;
-}
+}  */
 
 /* .switch input{
     display: none;
@@ -498,9 +498,9 @@ body {
     display: none;
 }
 
-.closed-sidebar .app-sidebar:hover .mm-collapse.mm-show {
+/* .closed-sidebar .app-sidebar:hover .mm-collapse.mm-show {
     display: block;
-}
+} */
 
 .vertical-nav-menu .mm-collapse:not(.mm-show) {
     display: none;
@@ -528,7 +528,7 @@ body {
 }
 
 .vertical-nav-menu li a {
-    display: block;
+    /* display: block; */
     line-height: 2.4rem;
     height: 34px;
     padding: 0 1.5rem 0 45px;
@@ -1770,9 +1770,9 @@ li.sub-menu.active::before {
     display: none;
 }
 
-.closed-sidebar .app-sidebar:hover .header-user-info {
+/* .closed-sidebar .app-sidebar:hover .header-user-info {
     display: block;
-}
+} */
 
 .closed-sidebar .app-sidebar .sideBarfooter {
     width: 20px;
@@ -1782,18 +1782,18 @@ li.sub-menu.active::before {
     display: none;
 }
 
-.closed-sidebar .app-sidebar:hover .sideBarfooter .hite-icon {
+/* .closed-sidebar .app-sidebar:hover .sideBarfooter .hite-icon {
     display: block;
-}
+} */
 
 .closed-sidebar .app-sidebar:hover .sideBarfooter {
     left: 0;
     width: 280px;
 }
 
-.closed-sidebar.down {
+/* .closed-sidebar.down {
     display: block;
-}
+} */
 
 .sidebar-content {
     display: flex;
@@ -1860,9 +1860,9 @@ li.sub-menu.active::before {
     display: none;
 }
 
-.closed-sidebar .app-sidebar:hover .tggleBtn {
+/* .closed-sidebar .app-sidebar:hover .tggleBtn {
     display: block;
-}
+} */
 
 .branding-logo {
     height: 60px;
@@ -1894,18 +1894,18 @@ li.sub-menu.active::before {
     display: none;
 }
 
-.closed-sidebar .app-sidebar:hover .menu-state-icon {
+/* .closed-sidebar .app-sidebar:hover .menu-state-icon {
     display: block;
     right: 18px;
-}
+} */
 
 .closed-sidebar .app-sidebar:hover .branding-logo-forMobile {
     display: none !important;
 }
 
-.closed-sidebar .app-sidebar:hover .branding-logo {
+/* .closed-sidebar .app-sidebar:hover .branding-logo {
     display: block;
-}
+} */
 
 .closed-sidebar .app-sidebar .branding-logo {
     display: none;
@@ -2061,7 +2061,7 @@ li.sub-menu.active::before {
     border: none !important;
     width: 40px;
     text-align: center;
-    display: block;
+    /* display: block; */
     box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
         0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
         0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
@@ -2302,11 +2302,11 @@ li.sub-menu.active::before {
     transition-timing-function: ease;
 }
 
-.hamburger-inner::before,
+/* .hamburger-inner::before,
 .hamburger-inner::after {
     content: "";
     display: block;
-}
+} */
 
 .hamburger-inner::before {
     top: -6px;
@@ -3384,7 +3384,7 @@ ul.radio-button-ex li input[type="radio"] {
 }
 
 ul.radio-button-ex li label {
-    display: block;
+    /* display: block; */
     position: relative;
     font-weight: 300;
     font-size: 1.35em;
@@ -3400,7 +3400,7 @@ ul.radio-button-ex li:hover label {
 }
 
 ul.radio-button-ex li .check {
-    display: block;
+    /* display: block; */
     position: absolute;
     border: 3px solid #aaaaaa;
     border-radius: 100%;
@@ -3418,7 +3418,7 @@ ul.radio-button-ex li:hover .check {
 }
 
 ul.radio-button-ex li .check::before {
-    display: block;
+    /* display: block; */
     position: absolute;
     content: "";
     border-radius: 100%;
@@ -3475,7 +3475,7 @@ ul.radio-button-ex li .check::before {
 .darkButtonContent section::before,
 .darkButtonContent section::after {
     content: "";
-    display: block;
+    /* display: block; */
 
     border-radius: 100%;
 
@@ -3549,7 +3549,7 @@ ul.radio-button-ex li .check::before {
 .darkButtonContent .design::before,
 .darkButtonContent .design::after {
     content: "";
-    display: block;
+    /* display: block; */
     width: 20px;
     height: 20px;
     border-radius: inherit;
@@ -3630,7 +3630,7 @@ ul.radio-button-ex li .check::before {
 @media only screen and (max-width: 500px) {
     #wrapper {
         padding: 1em;
-        display: block;
+        /* display: block; */
     }
 
     [id^="calendar"],
@@ -3641,7 +3641,7 @@ ul.radio-button-ex li .check::before {
     }
 
     [id^="calendar"]+h3 {
-        display: block;
+        /* display: block; */
         margin-bottom: 2em;
     }
 }
@@ -3876,9 +3876,9 @@ ul.radio-button-ex li .check::before {
     border-radius: 50%;
 }
 
-.bg-body-White:hover .copy-box {
+/* .bg-body-White:hover .copy-box {
     display: block;
-}
+} */
 
 .bg-body-White .copy-box i {
     font-size: 16px !important;
@@ -5072,7 +5072,7 @@ ul.timeline-3>li {
 
 .timelineThree .timeline-with-icons .timeline-item:after {
     position: absolute;
-    display: block;
+    /* display: block; */
     top: 0;
 }
 
@@ -5095,7 +5095,7 @@ ul.timeline-3>li {
 }
 
 .timelineFour .horizontal-timeline .items .items-list {
-    display: block;
+    /* display: block; */
     position: relative;
     text-align: center;
     padding-top: 70px;

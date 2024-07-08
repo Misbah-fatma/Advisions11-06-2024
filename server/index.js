@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
+const path = require('path');
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const { MONGO_URI, SECRET_KEY } = require("./config/keys");
 require('dotenv').config();
-const http = require('http');
-const socketIo = require('socket.io');
+
 
 // Middleware
 app.use("/uploads", express.static("uploads"));
@@ -26,6 +26,8 @@ app.use("/blockly", require("./routes/BlocklyRoute"));
 app.use('/api', require("./routes/BlocklyRoute"));
 app.use("/api", require("./routes/paymentRoute"));
 app.use("/terms", require("./routes/termsRoute"));
+app.use('/api', require("./routes/userActivityRoute"));
+app.use('/room',  require("./routes/roomRoute"));
 
 app.get("/api/getkey", (req, res) =>
   res.status(200).json({ key: process.env.RAZORPAY_API_KEY })
@@ -58,6 +60,33 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+const User =require('./model/UserModel')
+const { OAuth2Client } = require('google-auth-library');
+const { createAuthToken } = require("./middlewares/requireLogin");
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+
+app.post('/auth/google-login', async (req, res) => {
+  const { token } = req.body;
+
+  const ticket = await client.verifyIdToken({
+    idToken: token,
+    audience: process.env.GOOGLE_CLIENT_ID,
+  });
+
+  const { name, email, picture } = ticket.getPayload();
+
+  // Find or create user in your database
+  let user = await User.findOne({ email });
+  if (!user) {
+    user = await User.create({ name, email, picture });
+  }
+
+ 
+
+  res.status(200).json({ userInfo: user,  token});
+});
+
+
 // Database and server setup
 const PORT = process.env.PORT || 5000;
 
@@ -74,3 +103,5 @@ mongoose
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
+
