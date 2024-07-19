@@ -3,7 +3,7 @@ import Sidebar from './SideBar';
 import axios from "axios";
 import { Bar, Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
-import { TablePagination, Grid, Paper, useMediaQuery, useTheme, Drawer, IconButton, AppBar, Toolbar, Typography,Card, CssBaseline, Box } from "@mui/material";
+import { TablePagination, Grid, Paper, useMediaQuery, useTheme, Drawer, IconButton, AppBar, Toolbar, Typography, Card, CardContent, CssBaseline, Box } from "@mui/material";
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
@@ -155,7 +155,7 @@ const Student = () => {
           }
         });
 
-        console.log('Purchased courses response:', response.data); 
+        console.log('Purchased courses response:', response.data);
 
         setPurchasedCourses(response.data.courses.flat());
       } catch (error) {
@@ -297,7 +297,7 @@ const Student = () => {
 
   return (
     <div>
-      
+
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
         <Toolbar>
@@ -340,122 +340,126 @@ const Student = () => {
         }}
       >
         <Toolbar />
-      <Paper>
-        <Card>
-        <div className="container mb-4">
+        <Paper>
+          <Card>
+            <div className="container mb-4">
+              <div class="table-responsive">
+                <table className="table table-hover mt-4">
+                  <thead >
+                    <tr>
+                      <th scope="col" >Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Link</th>
 
-        <div class="table-responsive">
-      <table className="table table-hover mt-4">
-      <thead >
-            <tr>
-              <th scope="col" >Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{username}</td>
+                      <td>{email}</td>
+                      <td>{activity}</td>
+                    </tr>
 
-            </tr>
-          </thead>
-        <tbody>
-          <tr>
-
-            <td>{username}</td>
-            <td>{email}</td>
-            <td>{activity}</td>
-          </tr>
-       
-        </tbody>
-      </table>
-      </div>
-
-    </div>
-    </Card>
-    </Paper>
-        <h4 className="text-center">Purchased Courses</h4>
-        <table className="table table-hover">
-      
-          <thead >
-            <tr>
-              <th scope="col" >Course Title</th>
-              <th scope="col">Progress</th>
-              <th scope="col">Link</th>
-
-            </tr>
-          </thead>
-          <tbody >
-          {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                              .map((row) => (
-                                <tr key={row._id}>
-                                <td className="tableCustomar">
-                                  <span className="badge rounded-pill text-bg-success">{row.language}</span>
-                                </td>
-                                <td className="tableId"><span></span>  {truncateText(row.code, 9)}</td>
-                                <td className="tableId">{row.output}</td>
-                                <td className="tableId">{getStatus(row.output)}</td>
-                              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <h4 className="text-center">Purchased Courses</h4>
-        <table className="table table-hover">
-      
-          <thead >
-            <tr>
-              <th scope="col" >Course Title</th>
-              <th scope="col">Progress</th>
-              <th scope="col">Link</th>
-
-            </tr>
-          </thead>
-          <tbody >
-            {purchasedCourses.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((course, index) => (
-              <tr key={index} >
-                <td >{course.courseName}</td>
-
-                <td>Progress</td>
-                <td >
-                  <Link to={`/course/${course._id}`} sx={styles.linkButton}>View Course</Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={purchasedCourses.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-        {/* <Typography variant="h4" gutterBottom>Additional Info</Typography>
-        <Typography variant="body1">Room Count: {roomCount !== null ? roomCount : 'Loading...'}</Typography> */}
-          <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Paper sx={styles.card}>
-              <div sx={styles.cardBody}>
-                <Bar data={outputStatusChartData} />
+                  </tbody>
+                </table>
               </div>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Paper sx={styles.card}>
-              <div sx={styles.cardBody}>
-                <Line data={lineChartData} />
+
+            </div>
+          </Card>
+        </Paper>
+
+        <div className="row">
+          <div className="col-sm-12 col-md-6 col-xs-12">
+            <Card style={{margin : '3%'}}>
+              <div className="table-responsive">
+                <table className="table table-hover">
+                  <thead >
+                    <tr>
+                      <th scope="col" >Course Title</th>
+                      <th scope="col">Progress</th>
+                      <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                    {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                      .map((row) => (
+                        <tr key={row._id}>
+                          <td className="tableCustomar">
+                            <span className="badge rounded-pill text-bg-success">{row.language}</span>
+                          </td>
+                          <td className="tableId"><span></span>  {truncateText(row.code, 9)}</td>
+                          <td className="tableId">{row.output}</td>
+                          <td className="tableId">{getStatus(row.output)}</td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
               </div>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={12} md={4}>
-            <Paper sx={styles.card}>
-              <div sx={styles.cardBody}>
-                <Bar data={userCodeCountChartData} />
+            </Card>
+
+            <Card style={{margin : '3%'}}>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Purchased Courses
+                </Typography>
+              </CardContent>
+              <div className="table-responsive">
+                <table className="table table-hover">
+
+                  <thead >
+                    <tr>
+                      <th scope="col" >Course Title</th>
+                      <th scope="col">Progress</th>
+                      <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                    {purchasedCourses.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((course, index) => (
+                      <tr key={index} >
+                        <td >{course.courseName}</td>
+
+                        <td>Progress</td>
+                        <td >
+                          <Link to={`/course/${course._id}`} sx={styles.linkButton}>View Course</Link>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            </Paper>
-          </Grid>
-        </Grid>
+              <TablePagination
+                rowsPerPageOptions={[5, 10, 25]}
+                component="div"
+                count={purchasedCourses.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
+              />
+            </Card>
+          </div>
+
+          <div className="col-sm-12 col-md-6 col-xs-12">
+            <Card style={{margin : '3%'}}>
+            <Paper sx={styles.card}>
+                    <div sx={styles.cardBody}>
+                      <Bar data={outputStatusChartData} />
+                    </div>
+                  </Paper>
+                  <Paper sx={styles.card}>
+                    <div sx={styles.cardBody}>
+                      <Line data={lineChartData} />
+                    </div>
+                  </Paper>
+                  <Paper sx={styles.card}>
+                    <div sx={styles.cardBody}>
+                      <Bar data={userCodeCountChartData} />
+                    </div>
+                  </Paper>
+            </Card>
+          </div>
+        </div>
       </Box>
-      
     </div>
   );
 };
