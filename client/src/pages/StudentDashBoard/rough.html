@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Course: Web Design for Web Developers: Build Beautiful Websites! | Udemy</title>
+
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript">
+        // Note: must be called before google tag manager is initialized in OptanonWrapper()
+        if (typeof window.dataLayer == 'undefined') {
+            window.dataLayer = window.dataLayer || [];
+        }
+
+        function callGtag() {
+            window.dataLayer.push(arguments);
+        }
+
+        var GRANTED = 'granted';
+        var DENIED = 'denied';
+
+        window.optOutConsent = {
+            ad_storage: GRANTED,
+            analytics_storage: GRANTED,
+            functionality_storage: GRANTED,
+            personalization_storage: GRANTED,
+            security_storage: GRANTED
+        }
+
+        window.optInConsent = {
+            ad_storage: DENIED,
+            analytics_storage: DENIED,
+            functionality_storage: DENIED,
+            personalization_storage: DENIED,
+            security_storage: GRANTED
+        }
+
+        // initialize the default settings to opt-in to protect against timing conditions with Google Analytics Loading
+        callGtag('consent', 'default', window.optInConsent)
+    </script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="25ab360c-347c-4a85-8b93-1e0326234b75"></script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript">
+        window.isOneTrustActive = true;
+        window.OneTrustReadyHandlers = [];
+
+        var __attachOneTrustCustomHandlingOnlyOnce = (function () {
+            var hasExecuted = false;
+            return function () {
+                if (hasExecuted === true) {
+                    return false;
+                }
+                // Add consent change handler.
+                window.OneTrust.OnConsentChanged(function (consentEvent) {
+                    window.__onConsentChanged = window.__onConsentChanged || [];
+                    window.__onConsentChanged.push(consentEvent);
+                });
+                var queue = window.OneTrustReadyHandlers;
+                // Call the handlers that are queued after OneTrust is ready.
+                window.OneTrustReadyHandlers = {
+                    push: function (cb) {
+                        cb(window.OneTrust);
+                    }
+                };
+
+                // Call the handlers that were queued before OneTrust was ready.
+                for (var queueIndex = 0; queueIndex < queue.length; queueIndex++) {
+                    queue[queueIndex](window.OneTrust);
+                }
+                // Mark executed to prevent duplicate execution.
+                hasExecuted = true;
+            }
+        })();
+        function OptanonWrapper() {
+            __attachOneTrustCustomHandlingOnlyOnce();
+
+            var defaultDomainData = { ConsentModel: { Name: 'uninitialized'} };
+
+            // be extra conservative in how we load this data, as if OneTrust changes the contract
+            // we don't want to blow up the page load on every page on the site
+            var domainData = window.OneTrust.GetDomainData() || defaultDomainData;
+            var consentModel = domainData.ConsentModel ||  defaultDomainData.ConsentModel
+            var consentModelName = consentModel.Name ||  defaultDomainData.ConsentModel.Name
+
+            switch (consentModelName) {
+                case 'opt-out':
+                    this.callGtag('consent', 'default', window.optOutConsent);
+                    break;
+                case 'opt-in':
+                default:
+                    this.callGtag('consent', 'default', window.optInConsent);
+                    break;
+            }
+        }
+    </script>
+
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=">
+      (function(h,o,u,n,d) {
+        h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+        d=o.createElement(u);d.async=1;d.src=n
+        n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+      })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v4/datadog-rum.js','DD_RUM')
+      window.DD_RUM.onReady(function() {
+        window.DD_RUM.init({
+          clientToken: 'pubdf923e39e855ee202dba6e1cc60e59af',
+          applicationId: 'b904100c-0f95-4879-930d-2fd0bb993287',
+          site: 'datadoghq.com',
+          service: 'browser.request',
+          env: 'production',
+          version: '9fc4150d3a07be200c6ee66f641d237b0042551c',
+          allowedTracingOrigins: [/https:\/\/.*\.udemy\.(com|cn)/],
+          traceSampleRate: 100,
+          sampleRate: 1,
+          sessionReplaySampleRate: 1,
+          trackUserInteractions: true,
+          trackFrustrations: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel: 'mask',
+        });
+
+        DD_RUM.startSessionReplayRecording();
+      })
+    </script>
+<meta name="description" content="Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included! - Free Course"><meta name="title" content="Web Design for Web Developers: Build Beautiful Websites!"><meta name="medium" content="mult"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"><meta name="twitter:card" content="summary_large_image"><meta name="apple-itunes-app" content="app-id=562413829, affiliate-data=ct=Safari_SmartBanner&amp;amp;pt=1240482"><meta name="google-play-app" content="app-id=com.udemy.android"><meta name="robots" content="noindex,follow"><meta property="fb:app_id" content="313137469260"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="udemy_com:available" content="1"><meta property="udemy_com:category" content="Development"><meta property="udemy_com:instructor" content="https://www.udemy.com/user/jonasschmedtmann/"><meta property="udemy_com:price" content="Free"><meta property="og:title" content="Web Design for Web Developers: Build Beautiful Websites!"><meta property="og:url" content="https://www.udemy.com/course/web-design-secrets/"><meta property="og:description" content="Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included! - Free Course"><meta property="og:image" content="https://img-b.udemycdn.com/course/480x270/473160_d929_3.jpg"><meta property="og:image:secure_url" content="https://img-b.udemycdn.com/course/480x270/473160_d929_3.jpg"><meta property="og:type" content="udemy_com:course"><meta property="og:site_name" content="Udemy"><meta property="og:locale" content="en_US"><meta name="twitter:domain" content="www.udemy.com"><meta name="twitter:title" content="Web Design for Web Developers: Build Beautiful Websites!"><meta name="twitter:url" content="https://www.udemy.com/course/web-design-secrets/"><meta name="twitter:description" content="Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included! - Free Course"><meta name="twitter:image" content="https://img-b.udemycdn.com/course/480x270/473160_d929_3.jpg"><meta name="twitter:site" content="@udemy">
+<link rel="preload" as="font" type="font/woff2" href="/staticx/udemy/fonts/Udemy-Sans-Regular-v1.woff2" crossorigin="anonymous" />
+<link rel="preload" as="font" type="font/woff2" href="/staticx/udemy/fonts/Udemy-Sans-Bold-v1.woff2" crossorigin="anonymous" />
+<style type="text/css">
+    @font-face {
+        font-family: 'Udemy Sans';
+        font-style: normal;
+        font-weight: 400; /* To match token @font-weight-normal */
+        font-display: fallback;
+        src: local('Udemy Sans Regular'),
+             local('UdemySans-Regular'),
+             url('/staticx/udemy/fonts/Udemy-Sans-Regular-v1.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Udemy Sans';
+        font-style: normal;
+        font-weight: 700; /* To match token @font-weight-bold */
+        font-display: fallback;
+        src: local('Udemy Sans Bold'),
+             local('UdemySans-Bold'),
+             url('/staticx/udemy/fonts/Udemy-Sans-Bold-v1.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: SuisseWorks;
+        font-style: normal;
+        font-weight: 700; /* To match token @font-weight-bold */
+        font-display: fallback;
+        src: local('SuisseWorks Bold'),
+             local('SuisseWorks-Bold'),
+             url('/staticx/udemy/fonts/SuisseWorks-Bold-v1.woff2') format('woff2');
+    }
+</style>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" async src="https://frontends.udemycdn.com/design-system/icons/v10/icon-spritemap.js"></script>
+<link type="text/css" rel="stylesheet" href="/staticx/udemy/js/webpack/entry-main.5f4dc78bb5f43feec9fd.css" />
+<link type="text/css" rel="stylesheet" href="/staticx/udemy/js/webpack/common-app-css.7adfa7a9dfa5269f80b4.css" />
+<link type="text/css" rel="stylesheet" href="/staticx/udemy/js/webpack/common-desktop-server-side.9023fc3a189d85411802.css" />
+<link type="text/css" rel="stylesheet" href="/staticx/udemy/js/webpack/course-taking-server-side.656b33e4021322ce1b5d.css" />
+<link type="text/css" rel="stylesheet" href="/staticx/udemy/js/webpack/course-taking-udlite-app.803d2d88e90d738c233c.css" />
+<link rel="preconnect" href="https://s.udemycdn.com/" />
+<link rel="preconnect" href="https://s.udemycdn.com/" crossorigin />
+<link rel="preconnect" href="https://img-c.udemycdn.com/" />
+<link rel="preconnect" href="https://img-b.udemycdn.com/" />
+<link rel="dns-prefetch" href="https://s.udemycdn.com/" />
+<link rel="dns-prefetch" href="https://img-c.udemycdn.com/" />
+<link rel="dns-prefetch" href="https://img-b.udemycdn.com/" />
+<link nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" rel="preload" as="script" href="/staticx/udemy/js/webpack/course-taking-udlite-app.d206022f81e2904dc145.js" />
+<link nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" rel="preload" as="script" href="/staticx/udemy/js/webpack/common-desktop-udlite-app.dac8235286bd67df5f96.js" />
+<link rel="apple-touch-icon" sizes="180x180" href="/staticx/udemy/images/v7/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/staticx/udemy/images/v8/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/staticx/udemy/images/v8/favicon-16x16.png" />
+<link rel="manifest" href="/staticx/udemy/images/v7/site-manifest.json" />
+<meta name="application-name" content="Udemy" />
+<meta name="msapplication-TileColor" content="#a435f0" />
+<meta name="msapplication-TileImage" content="/staticx/udemy/images/v7/mstile-144x144.png">
+<meta name="msapplication-config" content="/staticx/udemy/images/v7/browserconfig.xml" />
+<meta name="theme-color" content="#ffffff" />
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=">
+    window.UD = window.UD || {};
+    window.UD.Config = {"version":"9fc4150d3a07be200c6ee66f641d237b0042551c","env":"PROD","graphql_federation_endpoint":"https://www.udemy.com/graphql/","marketplace_country":{"_className":"country","id":"IN","iso_code":"IND","title":"India","currency":"inr"},"price_country":{"_className":"country","id":"IN","currency":"inr","currency_symbol":"\u20b9","currency_decimal_places":0,"currency_formatter":{"currency":"inr","symbol":"\u20b9","locale":"en_US","decimal":".","group":",","pattern":"!#,##0.00","scale":0},"usd_currency_formatter":{"currency":"usd","symbol":"$","locale":"en_US","decimal":".","group":",","pattern":"!#,##0.00","scale":2}},"supported_languages":[{"locale":"en_US","name":"English","lang":"en"},{"locale":"de_DE","name":"Deutsch","lang":"de"},{"locale":"es_ES","name":"Espa\u00f1ol","lang":"es"},{"locale":"fr_FR","name":"Fran\u00e7ais","lang":"fr"},{"locale":"id_ID","name":"Bahasa Indonesia","lang":"id"},{"locale":"it_IT","name":"Italiano","lang":"it"},{"locale":"ja_JP","name":"\u65e5\u672c\u8a9e","lang":"ja"},{"locale":"ko_KR","name":"\ud55c\uad6d\uc5b4","lang":"ko"},{"locale":"nl_NL","name":"Nederlands","lang":"nl"},{"locale":"pl_PL","name":"Polski","lang":"pl"},{"locale":"pt_BR","name":"Portugu\u00eas","lang":"pt"},{"locale":"ro_RO","name":"Rom\u00e2n\u0103","lang":"ro"},{"locale":"ru_RU","name":"\u0420\u0443\u0441\u0441\u043a\u0438\u0439","lang":"ru"},{"locale":"th_TH","name":"\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22","lang":"th"},{"locale":"tr_TR","name":"T\u00fcrk\u00e7e","lang":"tr"},{"locale":"vi_VN","name":"Ti\u1ebfng Vi\u1ec7t","lang":"vi"},{"locale":"zh_CN","name":"\u4e2d\u6587(\u7b80\u4f53)","lang":"zh-cn"},{"locale":"zh_TW","name":"\u4e2d\u6587(\u7e41\u9ad4)","lang":"zh-tw"}],"brand":{"_className":"brand","title":"Udemy","identifier":"udemy","has_organization":false,"is_messaging_enabled":true,"is_discussions_enabled":true,"is_feed_commenting_enabled":true,"is_teaching_enabled":true,"is_add_reviews_enabled":true,"is_mobile_app_enabled":true,"is_import_courses_enabled":true,"is_social_sharing_enabled":true,"is_external_sources_enabled":true,"is_third_party_marketing_enabled":true,"is_government":false,"is_sso_enabled":false,"is_team":false,"logo_url_2x":"/staticx/udemy/images/v7/logo-udemy.svg","link_bar_nav_list_id":"ud-link-bar","is_share_to_workplace_enabled":false,"is_share_on_slack_enabled":false,"is_share_to_ms_teams_enabled":false,"is_profile_functions_enabled":true,"is_user_profiles_public":true,"product_logo":"/staticx/udemy/images/v7/logo-udemy.svg","product_logo_light":"/staticx/udemy/images/v7/logo-udemy-inverted.svg","product_logo_aspect_ratio":2.6785714285714284,"product_name":"Udemy","organization":false},"features":{"course_badge":true,"footer":{"links":{"about":true,"contact":true,"affiliates":true,"blog":true,"business":true,"careers":true,"benesse_corporate_page":false,"commercial_transactions_law_page":true,"teach":true}},"hello_bar":{"instructor":false,"pricing":true,"terms":true},"notice":{"instructor_bar":false,"smart_bar":false,"ufb_smart_bar":false},"notifications":true,"report_abuse":true,"shopping_cart":true,"wishlist":true,"social_share":{"email":true},"reviews":{"show_user_avatar":true},"zendesk_chat":false,"ufb_notices":true,"ufb_notices_footer":{"top_com":true},"collect_performance_rum":true,"braze_web_push":true,"pendo_enabled":false,"home":{"my_courses":{"free_label":true,"privacy":true,"revenue":true},"signup_cta":true,"ufb_ad":{"default":true,"jp":false}},"bundle":{"instructor_bio":{"social_links":true}},"course_landing_page":{"deal_badge":true,"incentives":{"access_tv":true,"lifetime_access":true},"instructor_bio":{"image":true,"social_links":true,"stats":true},"money_back_guarantee":true},"logged_in_home":{"linkbar_level_2":true,"ufb_ad":false},"course":{"discussions":{"view":true},"announcements":{"comments":{"view":true}},"students":{"unenroll":false},"refundable":true},"course_review":{"clp_review_search":true,"leave_feedback":true},"discount":{"change_alerts":true},"organization":{"auth":{"scim_api_enabled":false},"is_learner_goal_and_interest_collection_enabled":true,"manage_satisfaction":{"satisfaction":false},"learning_path":{"enabled":false,"copy_learning_path_item":false,"pro_path":false,"pro_path_hidden":false},"course_taking":{"student_assignment_submissions_enabled":true},"assignment_improvement_all_users":true,"manage_insights":{"path_insights_v2":false},"allow_only_plain_text_messaging":false,"is_measure_competence_release_train_enabled":false,"labs":{"are_beta_features_enabled":false},"is_fullstory_enabled":true,"is_ub_license_pools_enabled":false,"is_skills_benchmarking_enabled":true,"is_custom_xapi_self_serve_enabled":false,"is_user_reactivation_notification_enabled":true,"hide_org_user_search_for_group_admins":false,"is_export_insights_to_pdf_enabled":false,"is_course_versioning_enabled":false,"is_learner_progress_service_integration_enabled":false,"should_fetch_insights_from_las":true,"is_learning_communities_enabled":false,"is_shaka_player_enabled":false,"is_badging_assertions_upload_enabled":true,"hide_org_wide_learner_data":false,"should_serve_realtime_data_from_las":true,"is_user_activity_reports_v2_enabled":true}},"app_name":"course:course_taking","js_bundle":"modern","url":{"to_root":"https://www.udemy.com/","to_app":"https://www.udemy.com/","to_images":"https://www.udemy.com/staticx/udemy/images/","to_js":"https://www.udemy.com/staticx/udemy/js/"},"drm_license_server_url_template":"{base_url}media-license-server/validate-auth-token?drm_type={drm_type}\u0026auth_token={auth_token}","drm_fairplay_certificate_cdn_domain":"img-c.udemycdn.com","third_party":{"google_analytics_id":"UA-12366301-1","google_analytics_id_for_course_taking":"UA-12366301-45","google_tag_manager_id":"GTM-7BF3X","google_analytics_id_for_ufb_only":"UA-12366301-47","facebook_app_id":"313137469260","raven_dsn":"https://369c830fbf534485a068ab919d71b80d@sentry.io/38617","sift_account":"78b4b13f0a","uft_stripe_publishable_key":"pk_live_dCyHJcZsk8NaNwx1PiRSpqqq","branch_metrics":{"ios_download_url":"http://ude.my/ios","ios_ufb_download_url":"http://ude.my/ios-ufb","android_download_url":"http://ude.my/android","android_ufb_download_url":"http://ude.my/android-ufb"},"pusher":{"key":"dd9e21a517a37660588c","coding_exercise_event":"coding-exercise-evaluated"},"zendesk":{"refund_form_id":406368},"filestack":{"key":"A0EHlHYkEQbCTpDvxEwAYz"},"paypal":{"appid":"ASRJrkbBfTwvxWNTn-QRakeimIbsjmBuK5hWj4zq3QJL46CKIYNb-RiKjrTSe-2iZ-EFrCCuXGZTxHjY","authend":"live","returnurl":"https://www.udemy.com/user/paypal-login-return"},"s3":{"asset":{"key":"AKIA5IZMAQTG6TBSZJ67","bucket_url":"https://udemy-web-upload-transitional.s3.amazonaws.com"},"image_asset":{"key":"AKIA5IZMAQTG6TBSZJ67","bucket_url":"https://udemy-image-web-upload.s3.amazonaws.com"}},"storage_static_asset_base_url":"https://s.udemycdn.com/"}};
+    window.UD.experiment = {"srp":{"3058":{"variant":7654,"values":{"experimentation_platform_aa_test":true},"state":"recorded"}}};
+    window.UD.request = {"locale":"en_US","language":"en","third_party_location":"https://www.udemy.com/course/web-design-secrets/learn/lecture/2744010","navigation_locale":"en_US","language_simple_english_title":"English","termsBarType":"","termsBarUrls":"","isMobile":false,"isTablet":false,"isPC":true,"serverTimestamp":"2024-07-18T11:47:46.723325+05:30","is_tapen_access_domain":false,"is_bot":false,"extra_experiment_data":{"course_attributes":{"has_practice_test":false,"has_workspace":false},"is_new_pt_fullstory_enabled":{"fullstory_enabled":false},"is_output_enabled":{"languages":["python3","python3_8","python3_10","js"]},"is_new_practice_test_creation_ui_enabled":{"is_active":true}}};
+    window.UD.request.clientTimestamp = new Date().toISOString();
+    window.UD.site_stats = {"default":{"num_students_m":"70M","num_students_million":"70 million","num_courses":220000,"num_courses_rounded":220000,"num_instructors":75000,"num_topics":2000,"num_course_languages":74,"num_course_enrollments_m":"970M","num_course_enrollments_million":"970 million","num_countries_taught":180},"organizations":{"num_courses":26000,"num_courses_rounded":26000,"num_instructors":1500,"num_enterprise_customers":16000}};
+    window.UD.me = {"isLoading":false,"_className":"user","id":137097981,"email":"misbah7370@gmail.com","display_name":"Misbah Fatma-B-19","initials":"MF","title":"Misbah Fatma-B-19","time_zone":"Asia/Calcutta","country":"IN","locale":"en_US","name":"Misbah","surname":"Fatma-B-19","image_50x50":"https://img-b.udemycdn.com/user/50x50/anonymous_3.png","image_100x100":"https://img-c.udemycdn.com/user/100x100/anonymous_3.png","is_authenticated":true,"job_title":"","created":"2020-10-18T06:11:55Z","language":"en","learning_languages":[],"settings":{},"encrypted_affiliate_uid":"c0158357200f986fc2ca37f1a3c48ac25a8fc077","encrypted_affiliate_email":"95201e427cf8ebad2c44f50cee1889dc2a3212b2","encrypted_id":"x01ZfPkiEXHmSkWg__A8zgMRg==","has_made_paid_purchase":false,"number_of_courses_purchased":0,"organization":null,"url":"/user/misbah-fatma-b-19/","request_country_code":"IN","ip_address":"202.142.117.162"};
+    window.UD.meProperties = ["_className","id","email","display_name","job_title","initials","title","time_zone","country","created","locale","language","learning_languages","name","surname","image_50x50","image_100x100","settings","encrypted_affiliate_uid","encrypted_affiliate_email","encrypted_id","has_made_paid_purchase","number_of_courses_purchased","organization","url","request_country_code","ip_address"];
+    window.UD.visiting = {"isLoading":false,"visitor_uuid":"eccfb949e4f84caca6ecd0b96cbdcf44","is_first_time_visitor":false,"first_visit_time":"2024-05-28T12:11:10.712Z"};
+    window.UD.visitingProperties = ["visitor_uuid","is_first_time_visitor","first_visit_time"];
+    window.UD.userSpecificTrackingParams = {"isLoading":false,"tracking_enabled":true};
+    window.UD.userSpecificTrackingProperties = ["tracking_enabled"];
+    window.UD.userAgnosticTrackingParams = {"page_key":"course_taking"};
+
+    
+</script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=">
+        window.udPerformanceEnabled = true;
+    </script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=">
+    
+    window.GoogleAnalyticsObject = 'ga';
+    window.ga = function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    };
+    window.ga.l = 1 * new Date();
+
+    UD.GoogleAnalytics = UD.GoogleAnalytics || {};
+    UD.GoogleAnalytics.createAccount = function (accountId, propertyName, domainName) {
+        if (accountId) {
+            if (propertyName) {
+                // Required for multiple trackers
+                window.ga('create', accountId, 'auto', {'name': propertyName, 'cookieDomain': domainName || 'none',
+                    'siteSpeedSampleRate': 10});
+            } else {
+                window.ga('create', accountId, 'auto', {'siteSpeedSampleRate': 10});
+                window.ga('require', 'displayfeatures'); // Enables retargeting
+            }
+            window.ga('set', {
+                'anonymizeIp': true,
+                'location' : ""
+            });
+        }
+    };
+    UD.GoogleAnalytics.createAccount(UD.Config.third_party.google_analytics_id);
+</script>
+<base href="/course/web-design-secrets/learn/">
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript">
+    window.isBrazeEnabled = true;
+    window.nonceValue = "LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=";
+</script>
+</head>
+<body id="udemy" className="  udemy ">
+<div className="ud-main-content-wrapper">
+<div className="ud-main-content">
+<div className="ud-app-loader ud-component--course-taking--app" data-module-id="course-taking" data-module-args="{&quot;courseId&quot;:473160,&quot;initialCurriculumItemType&quot;:&quot;lecture&quot;,&quot;initialCurriculumItemId&quot;:2744010,&quot;canUserEditCourse&quot;:false,&quot;isUserInstructor&quot;:false,&quot;canManageCourseQA&quot;:false,&quot;isPreviewingAsStudent&quot;:false,&quot;hasDismissedReviewPrompt&quot;:false,&quot;useCache&quot;:true,&quot;availableFeatures&quot;:[],&quot;isCourseInConsumerSubs&quot;:false,&quot;adaptiveAssessmentForBanner&quot;:null,&quot;associatedAssessment&quot;:null,&quot;googleClientId&quot;:&quot;700206021005-as1l679sch207mp70msgjhma1krf3k9q.apps.googleusercontent.com&quot;,&quot;enableLabsInPersonalPlan&quot;:false,&quot;showUpdatedCertificationUnit&quot;:false,&quot;enableCertDueDateTracker&quot;:false,&quot;isLectureGuidanceEnabled&quot;:false,&quot;isFastFeedbackLectureGuidanceExperimentEnabled&quot;:false,&quot;courseLeadData&quot;:{&quot;captionedLanguages&quot;:[&quot;English [Auto]&quot;,&quot;Bulgarian [Auto]&quot;,&quot;Czech [Auto]&quot;,&quot;Danish [Auto]&quot;,&quot;Dutch [Auto]&quot;,&quot;Estonian [Auto]&quot;,&quot;Finnish [Auto]&quot;,&quot;French [Auto]&quot;,&quot;German [Auto]&quot;,&quot;Greek [Auto]&quot;,&quot;Hungarian [Auto]&quot;,&quot;Indonesian [Auto]&quot;,&quot;Italian [Auto]&quot;,&quot;Latvian [Auto]&quot;,&quot;Lithuanian [Auto]&quot;,&quot;Portuguese [Auto]&quot;,&quot;Romanian [Auto]&quot;,&quot;Slovak [Auto]&quot;,&quot;Spanish [Auto]&quot;,&quot;Swedish [Auto]&quot;,&quot;Ukrainian [Auto]&quot;],&quot;last_update_date&quot;:&quot;2021-04-28&quot;,&quot;published_time&quot;:&quot;2015-04-13T18:29:47Z&quot;,&quot;num_reviews&quot;:40484,&quot;rating&quot;:4.4662724,&quot;content_info_short&quot;:&quot;2.5 hours&quot;},&quot;occupationData&quot;:{},&quot;topics&quot;:[{&quot;id&quot;:8320,&quot;name&quot;:&quot;Web Design&quot;,&quot;localizedName&quot;:&quot;Web Design&quot;}],&quot;isUfbEnrollmentOrPurchase&quot;:true}">
+</div>
+</div>
+<div className="ud-app-loader ud-component--footer--footer-container ud-footer-container" data-module-id="common/desktop" data-module-args="{&quot;hideFooterUntilContentReady&quot;:false,&quot;currentLocaleId&quot;:&quot;en_US&quot;,&quot;linkColumns&quot;:[[{&quot;feature_flag&quot;:&quot;footer.links.business&quot;,&quot;href&quot;:&quot;/udemy-business/?locale=en_US\u0026mx_pg=index\u0026path=%2F\u0026ref=footer&quot;,&quot;text&quot;:&quot;Udemy Business&quot;},{&quot;feature_flag&quot;:&quot;footer.links.teach&quot;,&quot;href&quot;:&quot;/teaching/?ref=teach_footer&quot;,&quot;text&quot;:&quot;Teach on Udemy&quot;},{&quot;is_disabled&quot;:false,&quot;href&quot;:&quot;/mobile/&quot;,&quot;open_in_new_tab&quot;:true,&quot;text&quot;:&quot;Get the app&quot;},{&quot;feature_flag&quot;:&quot;footer.links.about&quot;,&quot;href&quot;:&quot;https://about.udemy.com/?locale=en-us&quot;,&quot;text&quot;:&quot;About us&quot;},{&quot;feature_flag&quot;:&quot;footer.links.contact&quot;,&quot;href&quot;:&quot;https://about.udemy.com/company?locale=en-us#offices&quot;,&quot;text&quot;:&quot;Contact us&quot;}],[{&quot;feature_flag&quot;:&quot;footer.links.careers&quot;,&quot;href&quot;:&quot;https://about.udemy.com/careers?locale=en-us&quot;,&quot;text&quot;:&quot;Careers&quot;},{&quot;feature_flag&quot;:&quot;footer.links.blog&quot;,&quot;href&quot;:&quot;https://blog.udemy.com/?ref=footer&quot;,&quot;text&quot;:&quot;Blog&quot;},{&quot;href&quot;:&quot;/support/&quot;,&quot;text&quot;:&quot;Help and Support&quot;},{&quot;feature_flag&quot;:&quot;footer.links.affiliates&quot;,&quot;href&quot;:&quot;/affiliate/&quot;,&quot;text&quot;:&quot;Affiliate&quot;},{&quot;is_disabled&quot;:false,&quot;href&quot;:&quot;https://investors.udemy.com&quot;,&quot;text&quot;:&quot;Investors&quot;},{&quot;is_disabled&quot;:true,&quot;href&quot;:&quot;/terms/&quot;,&quot;text&quot;:&quot;Terms&quot;},{&quot;style&quot;:{&quot;display&quot;:&quot;none&quot;},&quot;data_purpose&quot;:&quot;footer-imprint-contact&quot;,&quot;href&quot;:&quot;/terms/imprint-contact/&quot;,&quot;text&quot;:&quot;Impressum Kontakt&quot;}],[{&quot;is_disabled&quot;:false,&quot;href&quot;:&quot;/terms/&quot;,&quot;text&quot;:&quot;Terms&quot;},{&quot;href&quot;:&quot;/terms/privacy/&quot;,&quot;text&quot;:&quot;Privacy policy&quot;},{&quot;data_purpose&quot;:&quot;footer.links.cookie_preferences&quot;,&quot;style&quot;:{&quot;display&quot;:&quot;none&quot;},&quot;text&quot;:&quot;Cookie settings&quot;,&quot;text_us_mx&quot;:&quot;Do not sell or share my personal information&quot;},{&quot;href&quot;:&quot;/sitemap/&quot;,&quot;text&quot;:&quot;Sitemap&quot;},{&quot;href&quot;:&quot;https://about.udemy.com/accessibility-statement?locale=en-us&quot;,&quot;text&quot;:&quot;Accessibility statement&quot;}]],&quot;isJpFooter&quot;:false,&quot;ufbNotice&quot;:{&quot;link&quot;:&quot;/udemy-business/?locale=en_US\u0026path=request-demo-in-mx%2F\u0026ref=footer-ad&quot;,&quot;placement&quot;:&quot;footer-ad&quot;,&quot;isOnsiteRequestDemo&quot;:false}}" data-module-priority="-10"><div data-unique-id="158" style="display:none"></div><footer className="ud-footer" data-purpose="footer"><div className="footer-section ufb-notice-module--notice-row--LgC7t" data-testid="ufb-notice"><div className="ud-heading-lg ufb-notice-module--notice--NOcJY"><span>Top companies choose <a data-purpose="ufb-link" className="inverted-link" href="/udemy-business/?locale=en_US&amp;path=request-demo-in-mx%2F&amp;ref=footer-ad" target="_blank" rel="noopener">Udemy Business</a> to build in-demand career skills.</span></div><div className="ufb-notice-module--partner-logos--vHIWo"><img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt="Nasdaq" height="44" width="115" loading="lazy" /><img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt="Volkswagen" height="44" width="44" loading="lazy" /><img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt="Box" height="44" width="67" loading="lazy" /><img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt="NetApp" height="44" width="115" loading="lazy" /><img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt="Eventbrite" height="44" width="115" loading="lazy" /></div></div><div className="footer-section footer-section-main"><div className="links-and-language-selector"><div className="language-selector-container"><button type="button" className="ud-btn ud-btn-medium ud-btn-secondary ud-text-md language-selector-button-module--button--iLcUV" data-testid="language-selector-button"><svg aria-hidden="true" focusable="false" className="ud-icon ud-icon-small ud-icon-color-neutral"><use xlink:href="#icon-language"></use></svg><span>English</span></button></div><ul className="ud-unstyled-list link-column"><li><a href="/udemy-business/?locale=en_US&amp;mx_pg=index&amp;path=%2F&amp;ref=footer" className="link white-link ud-text-sm" target="_blank" rel="noopener">Udemy Business</a></li><li><a className="link white-link ud-text-sm" href="/teaching/?ref=teach_footer">Teach on Udemy</a></li><li><a className="link white-link ud-text-sm" href="/mobile/" target="_blank" rel="noopener noreferrer">Get the app</a></li><li><a className="link white-link ud-text-sm" href="https://about.udemy.com/?locale=en-us">About us</a></li><li><a className="link white-link ud-text-sm" href="https://about.udemy.com/company?locale=en-us#offices">Contact us</a></li></ul><ul className="ud-unstyled-list link-column"><li><a className="link white-link ud-text-sm" href="https://about.udemy.com/careers?locale=en-us">Careers</a></li><li><a className="link white-link ud-text-sm" href="https://blog.udemy.com/?ref=footer">Blog</a></li><li><a className="link white-link ud-text-sm" href="/support/">Help and Support</a></li><li><a className="link white-link ud-text-sm" href="/affiliate/">Affiliate</a></li><li><a className="link white-link ud-text-sm" href="https://investors.udemy.com">Investors</a></li></ul><ul className="ud-unstyled-list link-column"><li><a className="link white-link ud-text-sm" href="/terms/">Terms</a></li><li><a className="link white-link ud-text-sm" href="/terms/privacy/">Privacy policy</a></li><li><a className="link white-link ud-text-sm" href="/sitemap/">Sitemap</a></li><li><a className="link white-link ud-text-sm" href="https://about.udemy.com/accessibility-statement?locale=en-us">Accessibility statement</a></li></ul></div><div className="logo-and-copyright"><div className="logo-container" data-testid="logo-container"><a href="/" className="ud-btn ud-btn-large ud-btn-link ud-heading-md"><img src="/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="Udemy" width="91.07142857142857" height="34" loading="eager" /></a></div><div className="copyright-container ud-text-xs">© 2024 Udemy, Inc.</div></div></div></footer></div>
+</div>
+<div className="ud-app-loader ud-component--ui-feedback--ui-feedback" data-module-id="common/desktop" data-module-args="{&quot;uiMessages&quot;:[]}" data-module-priority="-10"></div>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript" src="/staticx/udemy/js/webpack/entry-main-manifest.859ba18afdb2f1156e5d.js" defer></script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript" src="/staticx/udemy/js/webpack/entry-main-vendor.5f884d780c89f0eee3da.js" defer></script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript" src="/staticx/udemy/js/webpack/jsi18n-en-us.1da427c0e7d81c65f5d6.js" defer></script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=" type="text/javascript" src="/staticx/udemy/js/webpack/entry-main.3c7418be4a0f9f901950.js" defer></script>
+<script nonce="LPC9NizC/kSoZqOaBEaCORbuRDH6WcnkcvIj+88+OS0=">
+    window.handleCSSToggleButtonClick = function (event) {
+        var target = event.currentTarget;
+        var cssToggleId = target && target.dataset && target.dataset.cssToggleId;
+        var input = cssToggleId && document.getElementById(cssToggleId);
+        if (input) {
+            if (input.dataset.type === 'checkbox') {
+                input.dataset.checked = input.dataset.checked ? '' : 'checked';
+            } else {
+                input.dataset.checked = input.dataset.allowToggle && input.dataset.checked ? '' : 'checked';
+                var radios = document.querySelectorAll('[name="' + input.dataset.name + '"]');
+                for (var i = 0; i < radios.length; i++) {
+                    if (radios[i] !== input) {
+                        radios[i].dataset.checked = '';
+                    }
+                }
+            }
+        }
+    };
+    (function () {
+        var cssToggleButtons = document.querySelectorAll('[data-css-toggle-id');
+        for (var i = 0; i < cssToggleButtons.length; i++) {
+            cssToggleButtons[i].addEventListener('click', window.handleCSSToggleButtonClick);
+        }
+    })();
+</script>
+<div className="ud-app-loader ud-component--event-tracking--tracker-initializer" data-module-id="common/desktop" data-module-priority="-10"></div>
+</body>
+</html>
+
+
+<div className="row">
+
+    <div className="col-lg-4 col-md-5 col-12 mb-4 mb-lg-0 pr-lg-6">
+       <div className="mb-6">
+          <h4 className="mb-3">Customer reviews</h4>
+          <span className="font-14"><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="far fa-star text-warning"></i></span>
+          <span className="h5">4.6 out of 5</span>
+          <p className="font-14">2,693 customer ratings</p>
+          <div className="row align-items-center mb-1 ">
+             <div className="col-md-2 col-2 pr-0">
+                <div className="font-12 text-dark">5 Star</div>
+             </div>
+             <div className="col-md-8 col-8 pr-2">
+                <div className="progress" style="height: 8px;">
+                   <div className="progress-bar
+                      bg-warning" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+             </div>
+             <div className="col-md-2 col-2">
+                <div className="font-12 text-primary">78%</div>
+             </div>
+          </div>
+          <div className="row align-items-center mb-1">
+             <div className="col-md-2 col-2 pr-0">
+                <div className="font-12 text-dark">4 Star</div>
+             </div>
+             <div className="col-md-8 col-8 pr-2">
+                <div className="progress" style="height: 8px;">
+                   <div className="progress-bar
+                      bg-warning" role="progressbar" style="width:12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+             </div>
+             <div className="col-md-2 col-2">
+                <div className="font-12 text-primary">12%</div>
+             </div>
+          </div>
+          <div className="row align-items-center mb-1">
+             <div className="col-md-2 col-2 pr-0">
+                <div className="font-12 text-dark">3 Star</div>
+             </div>
+             <div className="col-md-8 col-8 pr-2">
+                <div className="progress" style="height: 8px;">
+                   <div className="progress-bar
+                      bg-warning" role="progressbar" style="width:5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+             </div>
+             <div className="col-md-2 col-2">
+                <div className="font-12 text-primary">5%</div>
+             </div>
+          </div>
+          <div className="row align-items-center mb-1">
+             <div className="col-md-2 col-2 pr-0">
+                <div className="font-12 text-dark">2 Star</div>
+             </div>
+             <div className="col-md-8 col-8 pr-2">
+                <div className="progress" style="height: 8px;">
+                   <div className="progress-bar
+                      bg-warning" role="progressbar" style="width:2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+             </div>
+             <div className="col-md-2 col-2">
+                <div className="font-12 text-primary">2%</div>
+             </div>
+          </div>
+          <div className="row align-items-center mb-2">
+             <div className="col-md-2 col-2 pr-0">
+                <div className="font-12 text-dark">1 Star</div>
+             </div>
+             <div className="col-md-8 col-8 pr-2">
+                <div className="progress" style="height: 8px;">
+                   <div className="progress-bar
+                      bg-warning" role="progressbar" style="width:1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+             </div>
+             <div className="col-md-2 col-2">
+                <div className="font-12 text-primary">1%</div>
+             </div>
+          </div>
+       </div>
+       <div>
+          <h4 className="mb-1">Review this book</h4>
+          <p className="font-12 ">Share your thoughts with other customers</p>
+          <a href="#!" className="btn btn-primary btn-block">Write A Review</a>
+       </div>
+    </div>
+
+    <div className="col-lg-8 col-md-7 col-12">
+       <div className="d-flex align-items-center justify-content-between mb-4">
+          <div>
+             <h4 className="mb-0">Ratings &amp; Reviews</h4>
+          </div>
+          <div>
+             <select className="custom-select">
+                <option selected="">Sort on</option>
+                <option value="Most Recent">Most Recent</option>
+                <option value="Relevant">Relevant</option>
+                <option value="Newest">Newest</option>
+             </select>
+          </div>
+       </div>
+
+       <div className="mb-4 pb-4 border-bottom">
+          <div className="d-flex mb-3 align-items-center">
+             <img src="../assets/images/avatar-1.png" alt="" className="rounded-circle avatar-lg">
+             <div className="ml-2">
+                <h5 className="mb-1">
+                   Sohail Rahman
+                   <img src="../assets/images/verified.svg" alt="">
+                </h5>
+                <p className="font-12 mb-0">
+                   <span>Kolkata</span> <span>October 03,2020</span>
+                </p>
+             </div>
+          </div>
+          <div className="mb-2">
+             <span className="font-14 mr-2"><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="far fa-star text-warning"></i></span>
+             <span className="h5">Highly recommended</span>
+          </div>
+          <p>
+             Nice book explained in simplified method surely it will bring meaningful changes in your lifestyle which you always dream off Beat of luck coach you are great continue bringing great stuffs
+          </p>
+          <a href="#!" className="btn btn-light btn-sm mr-2">Helpful</a>
+          <a href="#!" className="text-inherit font-14">Report abuse</a>
+       </div>
+  
+       <div className="mb-4 pb-4 border-bottom">
+          <div className="d-flex mb-3 align-items-center">
+             <img src="../assets/images/avatar-4.png" alt="" className="rounded-circle avatar-lg">
+             <div className="ml-2">
+                <h5 className="mb-1">
+                   Riya Poojary
+                   <img src="../assets/images/verified.svg" alt="">
+                </h5>
+                <p className="font-12 mb-0">
+                   <span>Ahmedabad</span> <span>4 Month ago</span>
+                </p>
+             </div>
+          </div>
+          <div className="mb-2">
+             <span className="font-14 mr-2"><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="far fa-star text-warning"></i></span>
+             <span className="h5">Beware!! This Book can change your Life :)</span>
+          </div>
+          <p>
+             And I absolutely mean it what I said in Headline of my comment.
+             I have been following coach.com from very long. His one article
+             has absolutely changed my life, imagine what this book can offer
+             to you. If you are looking to form a new habit you have to read
+             this Book.
+          </p>
+          <a href="#!" className="btn btn-light btn-sm mr-2">Helpful</a>
+          <a href="#!" className="text-inherit font-14">Report abuse</a>
+       </div>
+
+       <div className="mb-4 pb-4 border-bottom">
+          <div className="d-flex mb-3 align-items-center">
+             <img src="../assets/images/avatar-7.png" alt="" className="rounded-circle avatar-lg">
+             <div className="ml-2">
+                <h5 className="mb-1">
+                   Francoise <img src="../assets/images/verified.svg" alt="">
+                </h5>
+                <p className="font-12 mb-0">
+                   <span>United Kingdom</span> <span>4 Month ago</span>
+                </p>
+             </div>
+          </div>
+          <div className="mb-2">
+             <span className="font-14 mr-2"><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="fas fa-star text-warning"></i><i className="far fa-star text-warning"></i></span>
+             <span className="h5">Absolutely superb!</span>
+          </div>
+          <p>
+             I have read so many books as part of my personal development but I always find that authors end up glorifying themselves throughout continuously going on and on about their own achievements. I urge anyone who loves the book to read his blog which has
+             loads of truly awesome resources.
+          </p>
+          <a href="#!" className="btn btn-light btn-sm mr-2">Helpful</a>
+          <a href="#!" className="text-inherit font-14">Report abuse</a>
+       </div>
+       <a href="#!" className="btn btn-primary">Read More Reviews</a>
+    </div>
+ </div>

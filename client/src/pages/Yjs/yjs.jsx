@@ -8,6 +8,7 @@ import Navbar from '../LandingPage/Navbar';
 import { CODE_SNIPPETS } from "../CodeEditor/constants.js";
 import LanguageSelector from "./Language.js";
 import { CopyIcon } from '@chakra-ui/icons';
+import { Helmet } from 'react-helmet';
 
 const CollaborativeEditor = () => {
   const socket = useRef(null);
@@ -206,6 +207,12 @@ const CollaborativeEditor = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Advisions LMS</title>
+        <meta name="description" content="Learning Management System" />
+        <meta name="keywords" content="Advisions, LMS" />
+      </Helmet> 
+       
       <Navbar />
       <ChakraProvider>
         <Box display="flex" height="100vh" padding="10px" backgroundColor="gray.100">

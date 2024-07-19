@@ -16,6 +16,7 @@ import Sidebar from '../Blocky/Sidebar';
 import Navbar from '../LandingPage/Navbar';
 import { useTranslation } from 'react-i18next';
 import "../../App.css";
+import { Helmet } from 'react-helmet';
 
 const BlocklyComponent = () => {
   const { t, i18n } = useTranslation();
@@ -447,6 +448,11 @@ else{
 
   return (
     <>
+      <Helmet>
+        <title>Advisions LMS</title>
+        <meta name="description" content="Learning Management System" />
+        <meta name="keywords" content="Advisions, LMS" />
+      </Helmet>  
       <Navbar />
       <ChakraProvider>
         <VStack height="100vh" padding="10px" backgroundColor="gray.100" spacing="10px">

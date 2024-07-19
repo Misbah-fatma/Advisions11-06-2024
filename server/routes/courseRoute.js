@@ -93,7 +93,7 @@ router.get('/api/user/:userId/courses', async (req, res) => {
 
 router.put('/courses/:id', upload.fields([{ name: 'courseThumbnail', maxCount: 1 },
    { name: 'coursePdf', maxCount: 3 }]), async (req, res) => {
-  const { courseName, courseDescription, coursePrice, courseLink } = req.body;
+  const { courseName, courseDescription, coursePrice, courseLink, popUpText } = req.body;
 
   try {
       // Find the course by ID
@@ -107,6 +107,7 @@ router.put('/courses/:id', upload.fields([{ name: 'courseThumbnail', maxCount: 1
       course.courseDescription = courseDescription;
       course.coursePrice = coursePrice;
       course.courseLink = courseLink;
+      course.popUpText = popUpText;
 
       if (req.files) {
           if (req.files.courseThumbnail) {
@@ -140,6 +141,21 @@ router.put('/courses/:id', upload.fields([{ name: 'courseThumbnail', maxCount: 1
           return res.status(404).json({ msg: 'Course not found' });
       }
       res.status(500).send('Server Error');
+  }
+});
+
+
+router.get('/api/purchasecourse/:courseId', async (req, res) => {
+  try {
+    const courseId = req.params.courseId;
+    console.log('Received courseId:', courseId);
+    const course = await Course.findById(req.params.courseId).populate('lectures');
+    if (!course) {
+      return res.status(404).send('Course not found');
+    }
+    res.json(course);
+  } catch (error) {
+    res.status(500).send('Server error');
   }
 });
 

@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const Home = () => {
 
@@ -25,6 +26,11 @@ const Home = () => {
     }, []);
     return (
         <>
+          <Helmet>
+        <title>Advisions LMS</title>
+        <meta name="description" content="Learning Management System" />
+        <meta name="keywords" content="Advisions, LMS" />
+      </Helmet>    
         <Navbar/>
      
         <div className="container-fluid pt-5 bg-primary hero-header position-relative" style={{ backgroundImage: `url(/assets/img/hero_1.jpg)`, backgroundSize: "cover", height: "100vh" }}>

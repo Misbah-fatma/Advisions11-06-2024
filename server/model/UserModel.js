@@ -48,10 +48,19 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+
+  createdBy :
+{
+  type: String,
+},
+
   teacherId: { type: String }, 
+
+  purchasedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }],
 
   codeHistory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Code' }]
 }, { timestamps: true });
+
 
 const UserModel = mongoose.model("User", userSchema);
 

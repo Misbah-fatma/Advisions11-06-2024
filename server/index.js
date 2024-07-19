@@ -28,6 +28,9 @@ app.use("/api", require("./routes/paymentRoute"));
 app.use("/terms", require("./routes/termsRoute"));
 app.use('/api', require("./routes/userActivityRoute"));
 app.use('/room',  require("./routes/roomRoute"));
+app.use('/',  require("./routes/purchaseRoute"));
+app.use('/api/seo',  require("./routes/seoRoute"));
+app.use('/',  require("./routes/ReviewRoute"));
 
 app.get("/api/getkey", (req, res) =>
   res.status(200).json({ key: process.env.RAZORPAY_API_KEY })

@@ -7,7 +7,7 @@ module.exports.postCourse__controller = async (req, res, next) => {
   try {
     console.log(req.body); // Log the request body to see what data is being sent
 
-    const { courseDescription, courseName, courseLink, coursePrice, lectures } = req.body;
+    const { courseDescription, courseName, courseLink, coursePrice, lectures, teacherName} = req.body;
 
     if (!courseDescription || !courseName || !courseLink || !coursePrice || !lectures) {
       return res.status(400).json({
@@ -86,6 +86,7 @@ module.exports.postCourse__controller = async (req, res, next) => {
       courseLink,
       coursePrice,
       coursePdf,
+      teacherName,
       teacher: req.user._id,
       lectures: savedLectures // Associate course with lectures
     });
@@ -206,14 +207,15 @@ module.exports.getItems__controller = async (req, res, next) => {
 
 exports.updateCourse = async (req, res) => {
   
-  const { id, courseName, courseLink, courseDescription, coursePrice } = req.body;
+  const { id, courseName, courseLink, courseDescription, coursePrice, popUpText } = req.body;
 
     try {
         const course = await CourseModel.findByIdAndUpdate(id, {
             courseName,
             courseLink,
             courseDescription,
-            coursePrice
+            coursePrice,
+            popUpText
         }, { new: true });
 
         res.json({ message: 'Course updated successfully', course });

@@ -6,7 +6,7 @@ const { SECRET_KEY } = require("../config/keys");
 
 module.exports.register__controller = async (req, res, next) => {
   try {
-    const { userName, email, password, confirmPassword, teacherId, role } = req.body; // Include teacherId
+    const { userName, email, password, confirmPassword, role, } = req.body;
 
     if (password !== confirmPassword) {
       return res.status(400).json({
@@ -27,8 +27,7 @@ module.exports.register__controller = async (req, res, next) => {
       userName,
       email,
       password: hash,
-      teacherId, // Save the teacherId in the database
-      role
+      role  // Save the role in the database
     });
 
     user.save()

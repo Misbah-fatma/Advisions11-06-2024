@@ -73,7 +73,37 @@ import CodeEditorProgramProgress from "./pages/StudentDashBoard/StudentsEnrolled
 import BlocklyProgress from "./pages/StudentDashBoard/StudentsEnrolled/BlocklyProgress.js"
 import Rough from "./pages/rough.js"
 import Info from "./pages/TeacherDashBoard/TeacherCourse/courseDetails.js"
-import AdminLectures from "./pages/AdminDashBoard/Course Management/CreateLectures.js"
+import AdminLectures from "./pages/AdminDashBoard/Course Management/CreateLectures.js";
+import PurchasedCourses from './pages/PurchasedCourse.js';
+import Classification from './pages/AI components/Classification/Classification.js';
+import Regression from './pages/AI components/Regression/Regression.js';
+import Clustering from './pages/AI components/Clustering/Clustering.js';
+import PCA from './pages/AI components/PCA/PCA.js';
+import SentimentAnalysis from './pages/AI components/SentimentAnalysis/SentimentAnalysis.js';
+import CNN from './pages/AI components/CNN/CNN.js';
+import NLP from './pages/AI components/NLP/NLP.js';
+import TFIDF from './pages/AI components/TFIDF/TFIDF.js';
+import ProblemCanvas from './pages/AI components/ProblemCanvas';
+import DataVisualization from './pages/AI components/DataVisualization/DataVisualization.js';
+import SpeciesIdentifier from './pages/AI components/SpeciesIdentifier/SpeciesIdentifier.js';
+import Entrepreneurship from './pages/AI components/Entrepreneurship';
+import AIModel from './pages/AI components/AIDashboard.js';
+import MLModel from './pages/AI components/MLDashboard.js';
+import EntrepreneurshipO from './pages/AI components/EntrepreneurshipO.js';
+import PurchasedCourseDetail from "./pages/StudentDashBoard/CourseDetails.js"
+import AllUser from './components/PrivateRoute/AllUser.js';
+import ClassificationTheory from "./pages/AI components/Classification/ClassificationTheory.js"
+import CnnExplanation from './pages/AI components/CNN/CNNTheory.js';
+import NLPExplanation from './pages/AI components/NLP/NLPTheory.js';
+import SentimentAnalysisExplanation from './pages/AI components/SentimentAnalysis/SentimentAnalysisTheory.js';
+import TDIDFAnalysisExplanation from "./pages/AI components/TFIDF/TFIDFTheory.js";
+import SpeciesIdentifierExplanation from "./pages/AI components/SpeciesIdentifier/SpeciesIdentifierTheory.js";
+import DataVisualizationTheory from './pages/AI components/DataVisualization/DataVisualiazationTheory.js';
+import PCATheory from './pages/AI components/PCA/PCATheory.js';
+import RegressionTheory from './pages/AI components/Regression/RegressionTheory.js';
+import ClusteringTheory from './pages/AI components/Clustering/ClusteringTheory.js';
+import SuperAdminPage from "./pages/SupeerAdminDashBoard/Dashboard.js"
+import SuperAdminRoute from "./components/PrivateRoute/SuperAdminRoute.js"
 
 
 const Routing = () => {
@@ -83,7 +113,7 @@ const Routing = () => {
     <Routes>
           <Route exact path="/"  element={<Home />}> 
       </Route>
-
+      <Route exact path="/superAdmin-dashboard" element={<SuperAdminRoute ><SuperAdminPage /></SuperAdminRoute>} />
         <Route exact path="/teacher-dashboard" element={<TeacherRoute><TeacherDash /></TeacherRoute>} />
 
         <Route exact path="/admin-dashboard" element={ <AdminRoute ><Dashboard3 /></AdminRoute>} />
@@ -109,6 +139,8 @@ const Routing = () => {
       <Route exact path="/blocklyProgress"  element={<BlocklyProgress />}>
       
       </Route>
+
+      <Route path="/purchasecourse/:courseId" element={<PurchasedCourseDetail/>} />
 
       <Route exact path="/checkout" element={<CheckOut />}>
     
@@ -138,6 +170,44 @@ const Routing = () => {
         <Route exact path="/affiliateterms"  element={<AffiliateTerms />}>
         
         </Route>
+        <Route exact path="/cnnExplanation"  element={<CnnExplanation />}>
+        
+        </Route>
+
+        
+        <Route exact path="/regressionTheory"  element={<RegressionTheory />}>
+        
+        </Route>
+
+        
+        <Route exact path="/nlpExplanation"  element={<NLPExplanation />}>
+        
+        </Route>
+
+        <Route exact path="/clusteringTheory"  element={<ClusteringTheory />}>
+        
+        </Route>
+
+        <Route exact path="/pcaTheory"  element={<PCATheory />}>
+        
+        </Route>
+
+        <Route exact path="/sentimentAnalysisExplanation"  element={<SentimentAnalysisExplanation />}>
+        
+        </Route>
+        
+        <Route exact path="/tdidfAnalysisExplanation"  element={<TDIDFAnalysisExplanation />}>
+        
+        </Route>
+        
+        
+        <Route exact path="/dataVisualizationTheory"  element={<DataVisualizationTheory />}>
+        
+        </Route>
+        <Route exact path="/speciesIdentifierExplanation"  element={<SpeciesIdentifierExplanation />}>
+        
+        </Route>
+        
         <Route exact path="/instructorterms"  element={<InstructorTerms />}>
         
         </Route>
@@ -178,6 +248,10 @@ const Routing = () => {
           <Route exact path="/NoticeToggle"  element={<NoticeToggle />}>
    
       </Route>
+
+      <Route exact path="/classificationTheory"  element={<ClassificationTheory />}>
+   
+   </Route>
       <Route exact path="/CourseInfo"  element={<CourseInfo />}>
       
       </Route>
@@ -212,6 +286,8 @@ const Routing = () => {
       <Route exact path="/DashBoardCourse"  element={<AdminRoute ><CourseDashboardInfo /></AdminRoute>} />
       <Route exact path="/category"  element={<AdminRoute ><Category /></AdminRoute>}>
    </Route>
+
+
    <Route exact path="/chapter"  element={<AdminRoute ><Chapter /></AdminRoute>} />
    <Route exact path="/teacherdash"  element={<AdminRoute ><Teacher /></AdminRoute>} />
    <Route exact path="/studentdash"  element={<AdminRoute ><Student /></AdminRoute>} />
@@ -235,6 +311,27 @@ const Routing = () => {
    <Route exact path="/TeacherDashChapter"  element={<TeacherRoute><TeacherChapter /></TeacherRoute>} />
    <Route exact path="/updatePassword"  element={<UpdatePassword />} />
    <Route exact path="/yjseditor"  element={<Yjs />} />
+
+   <Route exact path="/purchaseCourse" element={<PurchasedCourses />}>
+    
+    </Route>
+
+    <Route path="/entrepreneurship" element={<AllUser><Entrepreneurship /></AllUser>} />  
+          <Route path="/classification" element={<AllUser><Classification /></AllUser>} />
+          <Route path="/regression" element={<AllUser><Regression /></AllUser>} />
+          <Route path="/clustering" element={<AllUser><Clustering /></AllUser>} />
+          <Route path="/pca" element={<AllUser><PCA /></AllUser>} />
+          <Route path="/sentiment-analysis" element={<AllUser><SentimentAnalysis /></AllUser>} />
+          <Route path="/cnn" element={<AllUser><CNN /></AllUser>} />
+          <Route path="/nlp" element={<AllUser><NLP /></AllUser>} />
+          <Route path="/tfidf" element={<AllUser><TFIDF /></AllUser>} />
+          <Route path="/problem-canvas" element={<AllUser><ProblemCanvas /></AllUser>} />
+          <Route path="/data-visualization" element={<AllUser><DataVisualization /></AllUser>} />
+          <Route path="/species-identifier" element={<AllUser><SpeciesIdentifier /></AllUser>} />
+          <Route path="/aiModel" element={<AllUser><AIModel /></AllUser>} />
+          <Route path="/mlModel" element={<AllUser><MLModel /></AllUser>} />
+          <Route path="/caseStudy" element={<AllUser><EntrepreneurshipO /></AllUser>} />
+
     <Route  path="*" element={<NotFound />}>
       
     </Route>
