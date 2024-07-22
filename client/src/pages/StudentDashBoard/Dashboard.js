@@ -6,6 +6,8 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, 
 import { TablePagination, Grid, Paper, useMediaQuery, useTheme, Drawer, IconButton, AppBar, Toolbar, Typography,Card, CssBaseline, Box } from "@mui/material";
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend);
 
@@ -106,7 +108,8 @@ const Student = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
-
+  const dispatch = useDispatch();
+  const history = useNavigate ();
   const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_URL });
   const userId = userData ? userData._id : null;
   const username = userData?.userName;
@@ -284,6 +287,15 @@ const Student = () => {
     return text;
   }
 
+  const handleLogout = () => {
+    // Dispatch logout action
+    localStorage.clear("user");
+    localStorage.clear("auth_token");
+    dispatch({ type: "CLEAR__USER" });
+   history("/login")
+  };
+
+
   const drawer = (
     <div>
       <div>
@@ -299,10 +311,10 @@ const Student = () => {
     <div>
       
       <CssBaseline />
-      <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
+      <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }} className="bg-white">
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="primary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -310,9 +322,30 @@ const Student = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Student Dashboard
-          </Typography>
+          <img src= "assets/logo10.png" alt="Logo" style={{ height: "30px", marginRight: "5px" }} />
+          <div className="app-header-right ms-auto ">
+        <div className="app-header-right d-flex align-items-center">
+        <div className="container">
+    
+        <div className="nav-item nav-link active">
+                {
+                  userData ?
+                    <div className="nav-item dropdown">
+                      <a href="/" className="nav-link dropdown-toggle text-#6200ea" data-toggle="dropdown"
+                       style={{color : "#6200ea"}}>{userData.userName}
+                       <i className="fa fa-user-cirle-o mt-1" aria-hidden="true"></i></a>
+                      <div className="dropdown-menu  rounded-0 border-0 m-0">
+                       
+                        <button className="dropdown-item text-danger"  onClick={handleLogout} >Logout</button>
+                      </div>
+                    </div> :
+                    <Link to="/login" className="nav-item nav-link active">Login</Link>
+                }
+              </div>
+          
+              </div>
+              </div>
+              </div>
         </Toolbar>
       </AppBar>
       <Box component="nav">
@@ -369,15 +402,17 @@ const Student = () => {
     </div>
     </Card>
     </Paper>
-        <h4 className="text-center">Purchased Courses</h4>
+    <Paper>
+    <Card className="mt-4">
+      <div className="table-responsive">
         <table className="table table-hover">
       
-          <thead >
+          <thead className="text-center">
             <tr>
-              <th scope="col" >Course Title</th>
-              <th scope="col">Progress</th>
-              <th scope="col">Link</th>
-
+              <th scope="col" >Language</th>
+              <th scope="col">Code</th>
+              <th scope="col">Output</th>
+              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody >
@@ -394,8 +429,24 @@ const Student = () => {
             ))}
           </tbody>
         </table>
+        </div>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={data.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
+        </Card>
+        </Paper>
+
+        <Paper>
+        <Card className="mt-4">
 
         <h4 className="text-center">Purchased Courses</h4>
+        <div className="table-responsive">
         <table className="table table-hover">
       
           <thead >
@@ -407,7 +458,7 @@ const Student = () => {
             </tr>
           </thead>
           <tbody >
-            {purchasedCourses.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((course, index) => (
+            {purchasedCourses.map((course, index) => (
               <tr key={index} >
                 <td >{course.courseName}</td>
 
@@ -419,19 +470,12 @@ const Student = () => {
             ))}
           </tbody>
         </table>
-
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={purchasedCourses.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
+</div>
+        </Card>
+        </Paper>
         {/* <Typography variant="h4" gutterBottom>Additional Info</Typography>
         <Typography variant="body1">Room Count: {roomCount !== null ? roomCount : 'Loading...'}</Typography> */}
-          <Grid container spacing={3}>
+          <Grid container spacing={3} className="mt-4">
           <Grid item xs={12} sm={6} md={4}>
             <Paper sx={styles.card}>
               <div sx={styles.cardBody}>

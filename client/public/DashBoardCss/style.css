@@ -41,10 +41,6 @@ body {
     margin: 0;
 }
 
-.table th,
-.table td {
-    vertical-align: middle;
-}
 
 .app-header {
     height: 60px;
@@ -4624,22 +4620,7 @@ ul.radio-button-ex li .check::before {
     }
 }
 
-.tableId,
-.tableAction {
-    min-width: 100px !important;
-}
 
-.tableProduct {
-    min-width: 200px !important;
-}
-
-.tableCustomar {
-    min-width: 120px !important;
-}
-
-.tableStatus {
-    min-width: 150px
-}
 
 /* Dashbord-2 Style */
 .cardBox-section {
@@ -5139,10 +5120,3 @@ ul.timeline-3>li {
     font-weight: bold;
 }
 
-.tableId,
-.tableProduct,
-.tableCustomar,
-.tableStatus,
-.tableAction {
-    min-width: 0 !important;
-}
